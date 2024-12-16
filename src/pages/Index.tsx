@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -61,8 +62,12 @@ const Index = () => {
             transition={{ delay: 0.3 }}
             className="space-x-4"
           >
-            <Button variant="default">Commencer</Button>
-            <Button variant="outline">En savoir plus</Button>
+            <Button variant="default" asChild>
+              <Link to="/get-started">Commencer</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link to="/about">En savoir plus</Link>
+            </Button>
           </motion.div>
         </motion.div>
 
